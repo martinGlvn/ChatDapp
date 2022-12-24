@@ -119,7 +119,7 @@ export const ChatAppProvider = ({children})=>{
         <ChatAppContext.Provider value=
         
             {{ 
-                readMessage, createAccount, addFriends, sendMessage, readUser,
+                readMessage, createAccount, addFriends, sendMessage, readUser, connectWallet,CheckWalletConnected,
                 account, username, friendLists, friendMsg, loading, userLists, error,
                 currentUserName, currentUserAddress,
             }}>{children}
