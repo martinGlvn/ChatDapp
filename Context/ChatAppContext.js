@@ -1,5 +1,4 @@
-// Funcionalidad para la conexion con nuestro smart contract, mensajes, cuentas, etc.
-
+// Features for connecting to our smart contract, messages, accounts, readings.
 
 import React,{useState, useEffect} from 'react';
 import { useRouter } from "next/router";
