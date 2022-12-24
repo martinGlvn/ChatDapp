@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useEffect, useState, useContext } from 'react'
+
+// Internal Import
+import { ChatAppContext } from '../Context/ChatAppContext'
+
+
 
 const ChatApp = () => {
-  return (
-    <div>ChatApp</div>
-  )
+  
+  const { } = useContext(ChatAppContext);
+  return <div>Hey</div>
+  
 }
 
 export default ChatApp
