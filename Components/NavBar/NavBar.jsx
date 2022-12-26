@@ -43,15 +43,17 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [openModel, setOpenModel] = useState(false);
 
-  const { account, userName, connectWallet } = useContext(ChatAppContext);
+  const { account, userName, connectWallet, createAccount, error } = useContext(ChatAppContext);
 
   return (
 
     <div className={Style.NavBar}>
+
+
       <div className={Style.NavBar_box}>
 
         <div className={Style.NavBar_box_left}>
-          <Image src={images.logo} alt="logo" width={50} height={50}/>
+          <Image src={images.logo}  alt="logo" width={50} height={50}/>
         </div>
 
         <div className={Style.NavBar_box_right}>
@@ -133,12 +135,34 @@ const NavBar = () => {
             <Image src={images.open} alt="open" width={30} height={30}/>
           </div>
 
+
         </div>
 
       </div>
+      
+      {/* Model Component */}
+      {openModel && (
+        <div className={Style.modelBox}>
+          <Model 
+            openBox={setOpenModel}
+            title="WELCOME TO"
+            head="CHAT BUDDY"
+            info="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Natus quaerat quos non commodi nobis consequuntur provident,
+                  omnis dicta, dolor, repudiandae ipsum quam velit consequatur
+                  tenetur labore laboriosam aspernatur alias accusamus."
+            smallInfo="Kindley select your name..."
+            image={images.hero}
+            functionName={createAccount}
+            address={account}
+          />
+          
+        </div>
+      )}
+        {error == "" ? "" : <Error error={error} />}
     </div>
 
-  )
-}
+  );
+};
 
 export default NavBar
