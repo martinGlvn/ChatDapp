@@ -1,8 +1,17 @@
 import React from 'react'
 
-const Error = () => {
+// Internal Import 
+import Style from './Error.module.css'
+
+
+const Error = ({error}) => {
   return (
-    <div>Error</div>
+    <div className={Style.Error}>
+      <div className={Style.Error_box}>
+        <h1>Please Fix this Error & Reload Browser</h1>
+        {error}
+      </div>
+    </div>
   )
 }
 

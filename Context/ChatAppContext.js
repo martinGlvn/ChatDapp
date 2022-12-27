@@ -63,7 +63,7 @@ export const ChatAppProvider = ({children})=>{
     // Create Account 
     const createAccount = async({name, accountAddress})=>{
         try{
-            if(name || accountAddress) return setError("Name And Account, cannot bet emty");
+            // if(name || accountAddress) return setError("Name And Account, cannot bet emty");
             const contract = await connectingWithContract();
             const getCreatedUser = await contract.createAccount(name);
             setLoading(true);
