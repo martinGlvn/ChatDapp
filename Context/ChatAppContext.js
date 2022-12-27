@@ -78,7 +78,7 @@ export const ChatAppProvider = ({children})=>{
     // Add Your Friends
     const addFriends = async ({name, accountAddress}) =>{
         try {
-            if(name || accountAddress) return setError("Please Provider");
+            // if(name || accountAddress) return setError("Please Provider");
             const contract = await connectingWithContract();
             const addMyFriend = await contract.addFriend(accountAddress, name);
             setLoading(true);
