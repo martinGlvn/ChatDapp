@@ -97,7 +97,7 @@ const NavBar = () => {
             ))}
             <p className={Style.mobile_menu_btn}>
               <Image
-                src={images.close}
+                src={images.cancel}
                 alt="close"
                 width={50}
                 height={50}

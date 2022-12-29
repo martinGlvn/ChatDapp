@@ -9,7 +9,7 @@ const Loader = () => {
   return (
     <div className={Style.Loader}>
       <div className={Style.Loader_box}>
-        <Image src={images.loader} alt="loader" width={100} height={100}/>
+        <Image src={images.load} alt="loader" width={50} height={50}/>
       </div>
     </div>
   )

@@ -11,7 +11,7 @@ const UserCard = ({el, i, addFriends}) => {
       <div className={Style.UserCard_box}>
         <Image
         className={Style.UserCard_box_img}
-          src={images[`image${i + 1}`]}
+          src={images.logo[`image${i + 1}`]}
           alt="user"
           width={100}
           height={100}

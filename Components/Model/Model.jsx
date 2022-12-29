@@ -19,7 +19,7 @@ const Model = ({openBox, title, address, head, info, smallInfo, image, functionN
     <div className={Style.Model}>
       <div className={Style.Model_box}>
         <div className={Style.Model_box_left}>
-          <Image src={image} alt="buddy" width={700} height={700}/>
+          <Image src={images.main} alt="main" width={700} height={700}/>
         </div>
         <div className={Style.Model_box_right}>
           <h1>{title} <span>{head}</span></h1>
@@ -32,7 +32,7 @@ const Model = ({openBox, title, address, head, info, smallInfo, image, functionN
               <div className={Style.Model_box_right_name}>
 
             <div className={Style.Model_box_right_name_info}>
-              <Image src={images.userName} alt="user" width={30} height={30}/>
+              <Image src={images.logo} alt="user" width={30} height={30}/>
               <input type="text" placeholder='your name' onChange={(e)=> setName(e.target.value)}/>
             </div>
 
@@ -46,7 +46,7 @@ const Model = ({openBox, title, address, head, info, smallInfo, image, functionN
               <button 
                 onClick={()=> functionName({name, accountAddress})}>
                 {""}
-                <Image src={images.send} alt="send" width={30} height={30} />
+                <Image src={images.Submit} alt="send" width={30} height={30} />
                 {""}
                 Submit
               </button>
@@ -54,7 +54,7 @@ const Model = ({openBox, title, address, head, info, smallInfo, image, functionN
               <button 
                 onClick={()=> openBox(false)}>
                 {""}
-                <Image src={images.close} alt="send" width={30} height={30} />
+                <Image src={images.cancel} alt="send" width={20} height={30}/>
                 {""}
                 Cancele
               </button>
